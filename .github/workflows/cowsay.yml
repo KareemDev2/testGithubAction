@@ -13,6 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
+       # Étape pour vérifier le code avec Super-Linter
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Étape d'exécution de Super-Linter
+      - name: Run Super-Linter
+        uses: github/super-linter@v5
+
       # Étape pour afficher une vache avec cowsay
       - name: Cowsay Hello
         run: |
